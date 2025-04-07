@@ -1,15 +1,56 @@
-#colorchilderen {
-    // overider this for second problem 
-}
-
-#bluecolor {
-    // for second problem
-}
-
-#evenodd {
-    // for third problem 
-}
-
-#lastselector {
-    // for fourth problem 
-}
+/* 1. Make every .com link red using attribute selector */
+a[href*=".com"] {
+    color: red;
+  }
+  
+  /* 2. Color nested children text in #colorchilderen */
+  #colorchilderen {
+    // Red color for deeply nested divs
+    div > div > div > div {
+      color: red;
+    }
+  
+    // Yellow for deeper nested div
+    div > div > div > div > div {
+      color: yellow;
+    }
+  
+    // Green for immediate children starting from second set
+    > div:nth-child(n + 2) {
+      color: green;
+    }
+  }
+  
+  /* 3. Make second child of every list blue */
+  #bluecolor li:nth-child(2) {
+    color: blue;
+  }
+  
+  /* 4. Color even and odd numbers differently */
+  #evenodd li:nth-child(even) {
+    color: red;
+  }
+  
+  #evenodd li:nth-child(odd) {
+    color: green;
+  }
+  
+  /* 5. Make the last element of every list red */
+  #lastselector li:last-child {
+    color: red;
+  }
+  
+  /* 6. Remove default link styles, red on hover, blue on click */
+  a {
+    text-decoration: none;
+    color: inherit;
+  
+    &:hover {
+      color: red;
+    }
+  
+    &:active {
+      color: blue;
+    }
+  }
+  

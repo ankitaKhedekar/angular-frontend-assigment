@@ -1,0 +1,70 @@
+/* ✅ PART 1 - Color div, span, p based on content */
+.part1 > p:first-child {
+    color: red;
+  }
+  
+  .part1 > span {
+    color: blue;
+  }
+  
+  .part1 > div > p {
+    color: green;
+  }
+  
+  .part1 > div > span {
+    color: blue;
+  }
+  
+  .part1 > p:last-child {
+    color: yellow;
+  }
+  
+  
+  /* ✅ PART 2 - Color li elements in sequence: red, red, green, red, red, green... */
+  .part2 ol li:nth-child(3n + 1),
+  .part2 ol li:nth-child(3n + 2) {
+    color: red;
+  }
+  
+  .part2 ol li:nth-child(3n) {
+    color: green;
+  }
+  
+  
+  /* ✅ PART 3 - Divs turn red only if immediately preceded by span with class .iAffectMyNextdiv */
+  .part3 .iAffectMyNextdiv + div {
+    color: red;
+  }
+  
+  .part3 > div {
+    color: blue;
+  }
+  
+  
+  /* ✅ PART 4 - Color <a> based on content (or position) */
+  .part4 a:contains("Make me Red") {
+    color: red;
+  }
+  
+  .part4 a[target="_blank"] {
+    color: yellow;
+  }
+  
+  .part4 ul li:nth-child(2) a {
+    color: green;
+  }
+
+
+  .part4 a[target="_blank"] {
+    color: yellow;
+  }
+  
+  .part4 ul li:nth-child(2) a {
+    color: green;
+  }
+  
+  .part4 a:not([target]) {
+    color: red;
+  }
+  
+  

@@ -1,3 +1,91 @@
-.t{
-  background: red;
+// .t{
+//   background: red;
+// }
+
+/* Parent selector */
+.question-four {
+  /* Technique 1: display none */
+  div:nth-child(1) {
+    display: none;
+  }
+
+  /* Technique 2: visibility hidden */
+  div:nth-child(2) {
+    visibility: hidden;
+  }
+
+  /* Technique 3: opacity 0 */
+  div:nth-child(3) {
+    opacity: 0;
+  }
+
+  /* Technique 4: height and width 0 */
+  div:nth-child(4) {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  /* Technique 5: position absolute and off-screen */
+  div:nth-child(5) {
+    position: absolute;
+    left: -9999px;
+  }
+
+  /* Technique 6: transform scale(0) */
+  div:nth-child(6) {
+    transform: scale(0);
+  }
+
+  /* Technique 7: clip-path to nothing */
+  div:nth-child(7) {
+    clip-path: inset(100%);
+  }
+
+  /* Technique 8: font-size and line-height zero */
+  div:nth-child(8) {
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+  }
+
+  /* Technique 9: z-index behind with overflow hidden on parent */
+  div:nth-child(9) {
+    position: relative;
+    z-index: -1;
+  }
+
+  /* Technique 10: filter opacity */
+  div:nth-child(10) {
+    filter: opacity(0);
+  }
+
+  /* Technique 11: pointer-events none + opacity 0 */
+  div:nth-child(11) {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  /* Technique 12: scaleY(0) */
+  div:nth-child(12) {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  /* Technique 13: mask with full transparency */
+  div:nth-child(13) {
+    -webkit-mask-image: linear-gradient(transparent, transparent);
+    mask-image: linear-gradient(transparent, transparent);
+  }
+
+  /* Technique 14: visibility collapse (useful for tables, but still works) */
+  div:nth-child(14) {
+    visibility: collapse;
+  }
+
+  /* Technique 15: color match background */
+  div:nth-child(15) {
+    color: white;
+    background-color: white;
+  }
 }

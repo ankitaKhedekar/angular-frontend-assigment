@@ -35,6 +35,16 @@ export class QuestionOneComponent {
     console.log('value', 'valid', form.value, form.valid);
   }
 
+  onOptionalFieldTouched(event: any) {
+    const input = event.target;
+    if (input.value.trim() !== '') {
+      input.classList.add('ng-valid', 'ng-touched');
+    } else {
+      input.classList.add('ng-touched');
+    }
+  }
+  
+
 
 
 }

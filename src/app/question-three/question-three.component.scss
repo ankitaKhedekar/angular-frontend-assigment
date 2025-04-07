@@ -1,0 +1,43 @@
+/* Common Styles for Parent Boxes */
+.arrange1,
+.arrange2 {
+  width: 1000px;
+  height: 1000px;
+  background-color: blue;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 50px;
+  gap: 300px 300px; /* vertical and horizontal spacing */
+}
+
+/* Common Styles for Child Boxes */
+.arrange1 div,
+.arrange2 div {
+  width: 100px;
+  height: 100px;
+}
+
+/* Unique colors for each box in arrange1 */
+.arrange1 div:nth-child(1)  { background-color: red; }
+.arrange1 div:nth-child(2)  { background-color: green; }
+.arrange1 div:nth-child(3)  { background-color: yellow; }
+.arrange1 div:nth-child(4)  { background-color: orange; }
+.arrange1 div:nth-child(5)  { background-color: pink; }
+.arrange1 div:nth-child(6)  { background-color: cyan; }
+.arrange1 div:nth-child(7)  { background-color: lime; }
+.arrange1 div:nth-child(8)  { background-color: magenta; }
+.arrange1 div:nth-child(9)  { background-color: violet; }
+
+/* Unique colors for each box in arrange2 */
+.arrange2 div:nth-child(1)  { background-color: brown; }
+.arrange2 div:nth-child(2)  { background-color: teal; }
+.arrange2 div:nth-child(3)  { background-color: gold; }
+.arrange2 div:nth-child(4)  { background-color: tomato; }
+.arrange2 div:nth-child(5)  { background-color: turquoise; }
+.arrange2 div:nth-child(6)  { background-color: khaki; }
+.arrange2 div:nth-child(7)  { background-color: salmon; }
+.arrange2 div:nth-child(8)  { background-color: plum; }
+.arrange2 div:nth-child(9)  { background-color: navy; }
